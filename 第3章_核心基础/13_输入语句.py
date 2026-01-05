@@ -1,0 +1,5 @@
+name = input('请输入你的姓名：')
+age = input('请输入你的年龄：')
+age = int(age)
+print(f'{name}, 你今年的年龄是{age}')
+print(f'{name}, 你明年的年龄是{age + 1}')
