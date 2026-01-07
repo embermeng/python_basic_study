@@ -5,10 +5,16 @@
 import copy     # 拷贝对象（浅拷贝、深拷贝）
 import os       # 操作系统相关操作（文件、文件夹、路径系统层面的操作）
 import random   # 随机数相关（生成随机数、随机选择、洗牌）
+
+# 上面的copy、os、random是标准库模块中的【非内置模块】，可以通过__file__查看文件位置
+print(copy.__file__)
+print(os.__file__)
+print(random.__file__)
+
+# 一下这些模块是内置模块（用C语言写的），属于内置模块（无法看到具体实现，也没有__file__属性）
 import time     # 时间相关操作（获取时间、延时、格式化时间等。）
 import math     # 数学相关（开平方、取绝对值 等等）
 import sys      # Python 解释器相关操作
-
 
 # 创建一个文件夹
 # os.mkdir('demo')
