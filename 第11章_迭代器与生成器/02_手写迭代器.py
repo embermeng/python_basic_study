@@ -1,3 +1,4 @@
+from cn2an import an2cn
 # 迭代器是一次性的，状态只会向前推进，且不会自动重置（迭代器在遍历的过程中会被“消耗”）。
 # region
 # names = ['张三', '李四', '王五']
@@ -138,6 +139,9 @@ class Person:
         # 将字符串转为大写
         if isinstance(val, str):
             val = val.upper()
+        # 数字转为汉语形式
+        if isinstance(val, int):
+            val = an2cn(val)
         # 更新迭代器的状态
         self.__index += 1
         # 返回val
