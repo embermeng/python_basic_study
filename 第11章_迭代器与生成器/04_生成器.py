@@ -166,4 +166,41 @@
 #     print(attr)
 # endregion
 
+# 用生成器实现斐波那契数列
+# region
+# def fibo(total):
+#     pre = 1
+#     cur = 1
+#     for index in range(total):
+#         if index < 2:
+#             yield 1
+#         else:
+#             value = pre + cur
+#             pre = cur
+#             cur = value
+#             yield value
+#
+# f1 = fibo(10)
+# for item in f1:
+#     print(item, end=' ')
 
+
+# 无论是迭代器，还是生成器对象，都可以用list、tuple、set等直接拿到其里面的所有内容（注意：如果数据量很大，可能会挤爆内存）
+# res = list(f1)
+# print(res)
+# endregion
+
+# 生成器表达式：一种用类似列表推导式的语法，快速创建生成器对象的方式。
+# 语法格式：(表达式 for 变量 in 可迭代对象)。
+# 什么时候适合用生成器表达式？———— 当“每个结果，只依赖当前这一个元素”时。
+# region
+# nums = [10, 20, 30, 40]
+
+# 列表推导式
+# res1 = [n * 2 for n in nums]
+# print(res1)
+
+# 生成器表达式
+# res2 = (n * 2 for n in nums)
+# print(list(res2))
+# endregion
